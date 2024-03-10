@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.5fr repeat(6, 1fr);
+    grid-auto-flow: row;
+    width: 40vw;
+    height: 80vh;
+    border: 2px solid hsl(41, 100%, 3%);
+    border-radius: 5px;
+    background: hsla(41, 100%, 3%, 0.639);
+}
+
+.screen {
+    grid-area: 1 / 1 / 3 / 5;
+    background-color: hsl(167, 27%, 72%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 2rem;
+}
+
+.key-grid {
+    grid-area: 3 / 1 / 8 / 5;
+}
+
+.key-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    /* grid-auto-flow: row; */
+    gap: 1px;
+    /* background: hsl(76, 83%, 95%); */
+    background: hsla(41, 100%, 3%, 0.639);
+}
+
+.clear {
+    grid-area: 5 / 1 / 6 / 3;
+}
+
+.equal {
+    grid-area: 5 / 3 / 6 / 5;
+}
+
+.zero {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.decimal {
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.one {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.two {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.three {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.four {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.five {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.six {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.seven {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.eight {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.nine {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.square {
+    grid-area: 4 / 3 / 5 / 4;
+}
+
+[data-key="plus"] {
+    grid-area: 4 / 4 / 5 / 5;
+}
+
+[data-key="minus"] {
+    grid-area: 3 / 4 / 4 / 5;
+}
+
+[data-key="times"] {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+[data-key="divide"] {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+/* buttons */
+button {
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+.clear {
+    background: hsl(2, 91%, 61%);
+    transition: background-color 0.3s ease;
+}
+.clear:hover {
+    filter: brightness(1.2);
+}
+
+.equal {
+    background: hsl(42, 76%, 47%);
+    transition: background-color 0.3s ease;
+}
+.equal:hover {
+    filter: brightness(1.2);
+}
+
+[data-key] {
+    background-color: hsl(80, 2%, 53%);
+    transition: background-color 0.3s ease;
+}
+[data-key]:hover {
+    filter: brightness(1.2);
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.zero,
+.decimal,
+.square {
+    background: hsl(76, 83%, 95%);
+    transition: background-color 0.3s ease;
+}
+.one:hover,
+.two:hover,
+.three:hover,
+.four:hover,
+.five:hover,
+.six:hover,
+.seven:hover,
+.eight:hover,
+.nine:hover,
+.zero:hover,
+.decimal:hover,
+.square:hover {
+    background: hsl(80, 2%, 53%);
+}
+
+.screen {
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.7;
+}
+.disabled:hover {
+    cursor: default;
+}
